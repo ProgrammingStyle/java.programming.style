@@ -22,7 +22,8 @@ before_install:
   - export TZ=Asia/Shanghai
 
 script:
-  - yarn run build
+  - yarn install
+  - vuepress build
 
 after_success:
   - git config user.name "Programming Style"
