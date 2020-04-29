@@ -2,110 +2,92 @@ module.exports = {
     base: '/',
     dest: "docs",
     locales: {
-        "/cn": {
+        "/": {
             lang: "zh-CN",
-            title: "Java Programming Style",
-            description: "Java 代码整洁之道"
+            title: "Java 编程规范",
+            description: "Java 代码整洁之道",
         },
         "/en/": {
             lang: "en-US",
-            title: "Java Programming Style",
-            description: "Java Clean Code"
+            title: "Java Clean Code",
+            description: "Clean Code"
         }
     },
-    head: [["link", {rel: "icon", href: `/favicon.ico`}]],
+    head: [
+        ["link", {rel: "icon", href: `/favicon.ico`}]
+    ],
     themeConfig: {
         repo: 'programmingStyle/java.programming.style',
         docsRepo: "programmingStyle/java.programming.style",
         repoLabel: 'Java Programming Style',
         editLinks: true,
+        smoothScroll: true,
         locales: {
             "/": {
                 label: "简体中文",
-                selectText: "Languages",
+                selectText: "选择语言",
+                ariaLabel: '选择语言',
                 editLinkText: "在 GitHub 上编辑此页",
                 lastUpdated: "上次更新",
-                nav: [
-                    {
-                        text: "阿里规范",
-                        link: "/cn/alibaba/"
-                    },
-                    {
-                        text: "谷歌规范",
-                        link: "/cn/google/"
-                    }
-                ]
+                nav: require('./nav/zh'),
+                sidebar:{
+                    '/alibaba/': getAlibabaSidebar('Java开发手册(泰山版)'),
+                    '/google/': getGoogleSidebar('谷歌规约')
+                }
             },
             "/en/": {
                 label: "English",
                 selectText: "Languages",
+                ariaLabel: 'Select language',
                 editLinkText: "Edit this page on GitHub",
                 lastUpdated: "Last Updated",
-                nav: [
-                    {
-                        text: "Alibaba Style",
-                        link: "/en/alibaba/"
-                    },
-                    {
-                        text: "Google Style",
-                        link: "/en/google/"
-                    }
-                ]
+                nav: require('./nav/en'),
+                sidebar:{
+                    '/en/alibaba/': getAlibabaSidebar('Alibaba Java Development Manual (Taishan Edition)'),
+                    '/en/google/': getGoogleSidebar('Google Guide')
+                }
             }
         }
     }
+}
+
+  function getAlibabaSidebar(titleA){
+      return [
+          {
+              title: titleA,
+              collapsable: false,
+              children: [
+                  '',
+                  'java-specification',
+                  'exception-log-specification',
+                  'unit-test-specification',
+                  'security-specification',
+                  'mysql-database-specification',
+                  'project-struct-specification',
+                  'design-specification',
+                  'appendix'
+              ]
+          }
+      ];
   }
 
-  function genGuideSidebar(isZh) {
-    return [
-        {
-            title: isZh ? "快速入门" : "Getting Start",
-            collapsable: false,
-            children: ["", "quick-start", "install", "config", "annotation"]
-        },
-        {
-            title: isZh ? "核心功能" : "Core",
-            collapsable: false,
-            children: ["generator", "crud-interface", "wrapper", "page", "sequence", "id-generator"]
-        },
-        {
-            title: isZh ? "插件扩展" : "Plugin",
-            collapsable: false,
-            children: [
-                "hot-loading",
-                "logic-delete",
-                "enum",
-                "typehandler",
-                "auto-fill-metainfo",
-                "sql-injector",
-                "block-attack-sql-parser",
-                "performance-analysis-plugin",
-                "p6spy",
-                "optimistic-locker-plugin",
-                "dynamic-datasource",
-                "dts",
-                "tenant",
-                "dynamic-table-name-parser",
-                "mybatisx-idea-plugin"
-            ]
-        },
-        {
-            title: "FAQ",
-            collapsable: false,
-            children: [
-                "faq",
-                "donate"
-            ]
-        }
-    ]
-}
+  function getGoogleSidebar(titleA){
+      return [
+          {
+              title: titleA,
+              collapsable: false,
+              children: [
+                  '',
+                  'source-file-basics',
+                  'source-file-structure',
+                  'formatting',
+                  'naming',
+                  'programming-practices',
+                  'javadoc'
+              ]
+          }
+      ];
+  }
 
-function genConfigSidebar(isZh) {
-    return [
-        {
-            title: isZh ? "配置" : "Config",
-            collapsable: false,
-            children: ["", "generator-config"]
-        }
-    ]
-}
+
+  
