@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Java 编程规范</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="Java 代码整洁之道">
+    <link rel="preload" href="/assets/css/0.styles.f69a04f2.css" as="style"><link rel="preload" href="/assets/js/app.ebef3189.js" as="script"><link rel="preload" href="/assets/js/2.6bb482e9.js" as="script"><link rel="preload" href="/assets/js/20.16fbc1d6.js" as="script"><link rel="prefetch" href="/assets/js/10.43cf8674.js"><link rel="prefetch" href="/assets/js/11.e3e93c84.js"><link rel="prefetch" href="/assets/js/12.2916cd62.js"><link rel="prefetch" href="/assets/js/13.e0e9bcc6.js"><link rel="prefetch" href="/assets/js/14.134f0f23.js"><link rel="prefetch" href="/assets/js/15.ebf872e0.js"><link rel="prefetch" href="/assets/js/16.97604c24.js"><link rel="prefetch" href="/assets/js/17.f0da6ac9.js"><link rel="prefetch" href="/assets/js/18.683dd516.js"><link rel="prefetch" href="/assets/js/19.ac74fe53.js"><link rel="prefetch" href="/assets/js/21.1613b491.js"><link rel="prefetch" href="/assets/js/22.532d3087.js"><link rel="prefetch" href="/assets/js/3.b925be4d.js"><link rel="prefetch" href="/assets/js/4.42e5e5a2.js"><link rel="prefetch" href="/assets/js/5.00bc1fc7.js"><link rel="prefetch" href="/assets/js/6.8cf3236e.js"><link rel="prefetch" href="/assets/js/7.ee76a0f8.js"><link rel="prefetch" href="/assets/js/8.52beb9ac.js"><link rel="prefetch" href="/assets/js/9.d93f00cf.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.f69a04f2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Java 编程规范</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/alibaba/" class="nav-link">
+  阿里规范
+</a></div><div class="nav-item"><a href="/google/" class="nav-link router-link-active">
+  谷歌规范
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="选择语言" class="dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/google/source-file-basics.html" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li><li class="dropdown-item"><!----> <a href="/en/" class="nav-link">
+  English
+</a></li></ul></div></div> <a href="https://github.com/programmingStyle/java.programming.style" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Java Programming Style
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/alibaba/" class="nav-link">
+  阿里规范
+</a></div><div class="nav-item"><a href="/google/" class="nav-link router-link-active">
+  谷歌规范
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="选择语言" class="dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/google/source-file-basics.html" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li><li class="dropdown-item"><!----> <a href="/en/" class="nav-link">
+  English
+</a></li></ul></div></div> <a href="https://github.com/programmingStyle/java.programming.style" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Java Programming Style
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>谷歌规约</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/google/" class="sidebar-link">/google/</a></li><li><a href="/google/source-file-basics.html" class="active sidebar-link">/google/source-file-basics.html</a></li><li><a href="/google/source-file-structure.html" class="sidebar-link">/google/source-file-structure.html</a></li><li><a href="/google/formatting.html" class="sidebar-link">/google/formatting.html</a></li><li><a href="/google/naming.html" class="sidebar-link">/google/naming.html</a></li><li><a href="/google/programming-practices.html" class="sidebar-link">/google/programming-practices.html</a></li><li><a href="/google/javadoc.html" class="sidebar-link">/google/javadoc.html</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p>1source-file-basics</p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/programmingStyle/java.programming.style/edit/master/google/source-file-basics.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2020-4-29 09:11:06</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/google/" class="prev router-link-active">
+        /google/
+      </a></span> <span class="next"><a href="/google/source-file-structure.html">
+        /google/source-file-structure.html
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.ebef3189.js" defer></script><script src="/assets/js/2.6bb482e9.js" defer></script><script src="/assets/js/20.16fbc1d6.js" defer></script>
+  </body>
+</html>
